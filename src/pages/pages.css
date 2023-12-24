@@ -1,37 +1,107 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap);
+
+:root {
+  --color-dark: #29335C;
+  --color-green: #00FF88;
+  --color-red: #E4572E;
+  --color-blue: #669BBC;
+  --color-cream: #F5E9E2;
+}
+
 * {
     text-decoration: none;
     list-style-type: none;
+    text-align: left;
 }
 
 .pages-container {
     box-sizing: border-box;
     display: flex;
-    padding: 20px;
-    height: auto;
+    /* padding: 20px; */
+    /* height: 100vh; */
+    background-color: transparent;
 }
 
-.pages-box1 {
+/* BOX 1 */
+
+.pages-box1, .pages-box1 h3 {
     display: flex;
     flex-direction: column;
     align-items: start;
-    width: 70%;
+
+    width: 100%;
     margin: 10px;
-    border: 2px solid black;
+    margin: 20px;
+    /* border: 2px solid #29335C; */
+    background-color: transparent;
+    color: var(--color-blue);
 }
+
+.box1-parent {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box1-child h4 {
+    color: var(--color-red);
+}
+
+.box1-child {
+    flex: 1 0 calc(33.333% - 20px); /* Set the flex basis to 33.333% with some margin */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+    padding: 10px;
+}
+
+@media (max-width: 767px) {
+    .box1-child {
+        flex-basis: calc(50% - 20px); /* Two items per row on screens 767px and smaller */
+    }
+}
+
+@media (max-width: 600px) {
+    .box1-child {
+        flex-basis: calc(100% - 20px); /* One item per row on screens 600px and smaller */
+    }
+}
+
+.box1-child img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border: 1px solid var(--color-blue);
+}
+
+/* BOX 2 */
 
 .pages-box2 {
     display: flex;
     flex-direction: column;
-    width: 30%;
-    margin: 10px 10px 10px 20px;
-    border: 2px solid black;
+    width: 25%;
+    /* margin: 10px 10px 10px 20px; */
+    font-weight: bold;
+}
+
+.pages-box2 h3 {
+    padding: 25px 10px;
+    display: flex;
+    flex-direction: row;
+    color: var(--color-blue);
+    font-size: larger;
+}
+
+.pages-box2 ul  {
+    /* padding: 20px; */
+    margin: 10px;
+    border-left: 5px solid var(--color-red);
+    height: 90%;
 }
 
 .pages-box2 ul li {
-    padding: 20px;
-    margin: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 .pages-box2 ul li:hover {
-    background-color: white;
+    background-color: var(--color-blue);
 }

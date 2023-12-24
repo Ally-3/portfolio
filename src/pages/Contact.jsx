@@ -1,16 +1,23 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
 import '../App.css';
 
 const Contact = () => {
 
-    return (
-        <div className='App-l'>
-            <div className='body-container-l'>
-                <div className='text-container-l'>
-                    <h3>CONTACT</h3>
+   return (
+        <div>
+            <div className='FootContainer'>
+                <div className='FootWrapper'>
+                    <div className='NavHeading'>
+                        <Link to="/"><h3>Contact</h3></Link>
+                    </div>
+                    <ul className='NavList'>
+                        <li><Link to="/Contact" className='link'>Contact</Link></li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    );
-};
-
-export default Contact;
+     </div>
+   );
+ };
+ 
+ export default Contact;
