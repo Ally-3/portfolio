@@ -1,0 +1,91 @@
+:root {
+    --color-dark: #29335C;
+    --color-green: #00FF88;
+    --color-red: #E4572E;
+    --color-blue: #669BBC;
+    --color-cream: #F5E9E2;
+}
+
+/* MODAL */
+
+.openModal-button {
+    background-color: transparent;
+    /* text-decoration: none; */
+    border: none;
+    width: 100%;
+    padding: 10px;
+}
+
+.openModal-button :hover {
+    color: var(--color-red);
+    background-color: var(--color-blue);
+}
+
+.skills-container {
+    box-sizing: border-box;
+    display: flex;
+    /* padding: 20px; */
+    /* height: 100vh; */
+    background-color: transparent;
+}
+
+/* SKILLS BOX 1 */
+
+.skills-box1 {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    height: 100vh;
+    margin: 20px;
+    /* border: 2px solid #29335C; */
+    background-color: transparent;
+}
+
+.skills-h3 {
+    color: var(--color-green);
+    margin: 10px;
+}
+
+h4 {
+    padding-top: 20px;
+}
+
+h4, h5 {
+    margin-left: 10px;
+}
+
+/* SKILLS BOX 2 */
+
+.skills-box2 {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    /* margin: 10px 10px 10px 20px; */
+    font-weight: bold;
+}
+
+.skills-box2 h3 {
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: row;
+    color: var(--color-red);
+    /* font-size: larger; */
+}
+
+.skills-box2 ul  {
+    /* padding: 20px; */
+    margin: 10px;
+    border-left: 5px solid var(--color-red);
+    height: 100%;
+}
+
+.skills-box2 ul li {
+    padding: 5px; 
+   /* margin-bottom: 10px; */
+}
+
+.pages-box2 ul li:hover {
+    background-color: var(--color-blue);
+    color: var(--color-red);
+} 

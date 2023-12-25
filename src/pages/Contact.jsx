@@ -9,7 +9,7 @@ const Contact = () => {
             <div className='FootContainer'>
                 <div className='FootWrapper'>
                     <div className='NavHeading'>
-                        <Link to="/"><h3>Contact</h3></Link>
+                        <Link to="/"><h3>CONTACT</h3></Link>
                     </div>
                     <ul className='NavList'>
                         <li><Link to="/Contact" className='link'>Contact</Link></li>

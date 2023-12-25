@@ -16,15 +16,21 @@
   padding: 0;
   /* box-sizing: border-box; */
   text-decoration: none;
-  color: var(--color-dark);
+  color: var(--color-blue);
   font-family: Chakra Petch;
   letter-spacing: 3px;
   /* background-color: #00FF88; */
-  background-color: var(--color-cream);
+  /* background-color: lightblue; */
+  
 }
 
-.App, .App-l {
+.App {
   text-align: center;
+  height: 100%;
+  background: linear-gradient(to right, #1d1f1d, #454947);
+}
+
+.App-l {
   height: 100vh;
 }
 
@@ -36,6 +42,7 @@
   background-color: transparent;
   color: var(--color-blue);
 }
+
 
 /* NAVBAR */
 
@@ -74,6 +81,7 @@
 
 .link:hover {
   background-color: var(--color-blue);
+  color: var(--color-green);
 }
 
 /* FOOTER */

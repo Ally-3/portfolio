@@ -7,6 +7,9 @@
   --color-red: #E4572E;
   --color-blue: #669BBC;
   --color-cream: #F5E9E2;
+
+  --color-grey: #404E4D;
+  --color-black: #1C1C23;
 }
 
 * {
@@ -23,6 +26,11 @@
     background-color: transparent;
 }
 
+h3 {
+    color: var(--color-red);
+    font-size: larger;
+}
+
 /* BOX 1 */
 
 .pages-box1, .pages-box1 h3 {
@@ -35,7 +43,7 @@
     margin: 20px;
     /* border: 2px solid #29335C; */
     background-color: transparent;
-    color: var(--color-blue);
+    color: var(--color-green);
 }
 
 .box1-parent {
@@ -83,25 +91,27 @@
 }
 
 .pages-box2 h3 {
-    padding: 25px 10px;
+    padding: 25px 20px;
     display: flex;
     flex-direction: row;
-    color: var(--color-blue);
-    font-size: larger;
+    color: var(--color-red);
+    /* font-size: larger; */
 }
 
 .pages-box2 ul  {
     /* padding: 20px; */
     margin: 10px;
     border-left: 5px solid var(--color-red);
-    height: 90%;
+    height: 100%;
 }
 
 .pages-box2 ul li {
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 5px; 
+   /* margin-bottom: 10px; */
 }
 
 .pages-box2 ul li:hover {
     background-color: var(--color-blue);
-}
+    color: var(--color-red);
+} 
+

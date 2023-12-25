@@ -1,11 +1,18 @@
 import '../App.css';
 import './pages.css';
 import game from '../images/game-l.png';
-import cats from '../images/cats-s.png';
+import cats from '../images/cats-m.png';
 import insta from '../images/insta-s.png';
 import apple from '../images/apple-l.png';
 import calc from '../images/calc-s.png';
 import drum from '../images/drum-s.png';
+import GameIt from '../components/projects/GameIt';
+import CatsEcom from '../components/projects/CatsEcom';
+import Insta from '../components/projects/Insta';
+import Calc from '../components/projects/Calc';
+import Drum from '../components/projects/Drum';
+import Apple from '../components/projects/Apple';
+
 
 const Projects = () => {
 
@@ -38,12 +45,12 @@ const Projects = () => {
                 <div className='pages-box2'>
                     <ul>
                         <h3>MORE INFO</h3>
-                        <li>Game\it</li>
-                        <li>Cats e-commerce</li>
-                        <li>Insta Clone</li>
-                        <li>Calculator</li>
-                        <li>Drum Kit</li>
-                        <li>Apple Clone</li>
+                        <li><GameIt /></li>
+                        <li><CatsEcom /></li>
+                        <li><Insta /></li>
+                        <li><Calc /></li>
+                        <li><Drum /></li>
+                        <li><Apple /></li>
                     </ul>
                 </div>
             </div>

@@ -1,27 +1,29 @@
 import '../App.css';
-import './pages.css';
+// import './pages.css';
+import '../components/moreinfo.css'
 
 const Skills = () => {
 
     return (
         <div>
-            <div className='pages-container'>
-                <div className='pages-box1'>
-                    <h3>SKILLS</h3>
+            <div className='skills-container'>
+                <div className='skills-box1'>
+                    <h3 className='skills-h3'>SKILLS</h3>
+                        <h4>PRESENTLY</h4>
+                        <h4>25-SEP-23 to 15-DEC-23</h4>
+                            <h5>CodeNation - Software Bootcamp</h5>    
+                        <h4>12-JUNE-23 to 12-OCT-23</h4>
+                            <h5>AWH - Criminal Secretary</h5>   
+                        <h4>19-SEP-16 to 01-JUN-23</h4>
+                            <h5>HMRC - Admin Officer</h5>
                 </div>
                 <br />
-                <div className='pages-box2'>
+                <div className='skills-box2'>
                     <ul>
-                        <li>PRESENTLY</li>
-                        <li>25-SEP-23<br />to<br />15-DEC-23<br /><br />
-                            CodeNation - Software Bootcamp
-                        </li>
-                        <li>12-JUNE-23<br />to<br />12-OCT-23<br /><br />
-                            AWH - Criminal Secretary
-                        </li>
-                        <li>19-SEP-16<br />to<br />01-JUN-23<br /><br />
-                            HMRC - Admin Officer
-                        </li>
+                        <h3>MORE INFO</h3>
+                        <li>Software Bootcamp</li>
+                        <li>Criminal Secretary</li>
+                        <li>HMRC - Admin Officer</li>
                     </ul>
                 </div>
             </div>
