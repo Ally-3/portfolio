@@ -36,7 +36,7 @@ const Projects = () => {
                                 <img src={project.image} alt={project.name} />
                                 <h4>{project.name}</h4>
                                 <h5>{project.stack}</h5>
-                                <h5>{project.using}</h5>
+                                <h5>{project.using}</h5><br />
                             </div>
                         ))}
                     </div>

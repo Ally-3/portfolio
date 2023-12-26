@@ -1,9 +1,12 @@
+@import url(https://fonts.googleapis.com/css2?family=Sono&display=swap);
+
 :root {
     --color-dark: #29335C;
     --color-green: #00FF88;
     --color-red: #E4572E;
     --color-blue: #669BBC;
     --color-cream: #F5E9E2;
+    --color-yellow: #f3f17a;
 }
 
 /* MODAL */
@@ -17,15 +20,61 @@
 }
 
 .openModal-button :hover {
-    color: var(--color-red);
+    color: var(--color-yellow);
     background-color: var(--color-blue);
+}
+
+li:hover {
+    color: var(--color-yellow);
+    background-color: var(--color-blue);
+}
+
+/* INSIDE MODAL */
+
+.open-modal {
+    height: 150%;
+    /* height: 100vh; */
+    background-color: #454947;
+}
+
+@media (max-width: 600px) {
+    .open-modal {
+        height: auto;
+    }
+} 
+
+.modal-h3 {
+    color: var(--color-green);
+    font-weight: bolder;
+    margin: 10px;
+}
+
+.modal-h4 {
+    color: var(--color-yellow);
+    margin: 10px;
+    padding-top: 20px;
+}
+
+.modal-h5 {
+    color: var(--color-blue);
+    font-family: Sono;
+    letter-spacing: normal;
+    margin: 10px;
+}
+
+.modal-find {
+    color: var(--color-yellow);
+    font-size: small;
+    font-family: Sono;
+    letter-spacing: normal;
+    margin: 10px;
 }
 
 .skills-container {
     box-sizing: border-box;
     display: flex;
     /* padding: 20px; */
-    /* height: 100vh; */
+    /* height: 100vh;  */
     background-color: transparent;
 }
 
@@ -36,7 +85,7 @@
     flex-direction: column;
     align-items: start;
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     margin: 20px;
     /* border: 2px solid #29335C; */
     background-color: transparent;
@@ -44,14 +93,33 @@
 
 .skills-h3 {
     color: var(--color-green);
-    margin: 10px;
+    margin: 20px;
+    margin-left: 10px;
 }
 
-h4 {
+.skills-date {
     padding-top: 20px;
+    color: var(--color-yellow);
 }
 
-h4, h5 {
+.skills-job {
+    color: var(--color-yellow);
+    padding-bottom: 5px;
+}
+
+.skills-hard, .skills-soft {
+    color: var(--color-green);
+}
+
+.skills-info {
+    color: var(--color-blue);
+    font-family: Sono;
+    font-size: small;
+    line-height: 20px;
+    letter-spacing: normal;
+}
+
+.skills-date, .skills-job, .skills-info, .skills-hard, .skills-soft {
     margin-left: 10px;
 }
 
@@ -69,14 +137,14 @@ h4, h5 {
     padding: 25px 20px;
     display: flex;
     flex-direction: row;
-    color: var(--color-red);
+    color: var(--color-yellow);
     /* font-size: larger; */
 }
 
 .skills-box2 ul  {
     /* padding: 20px; */
     margin: 10px;
-    border-left: 5px solid var(--color-red);
+    border-left: 5px solid var(--color-yellow);
     height: 100%;
 }
 
@@ -87,5 +155,5 @@ h4, h5 {
 
 .pages-box2 ul li:hover {
     background-color: var(--color-blue);
-    color: var(--color-red);
+    color: var(--color-yellow);
 } 

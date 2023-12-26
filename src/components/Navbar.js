@@ -10,7 +10,7 @@ const Navbar = () => {
                 <div className='NavWrapper'>
                     <div className='NavHeading'>
                         {/* <img src={catlogo} alt="Cat Logo" /> */}
-                        <Link to="/"><h3>ALEASA AWAN</h3></Link>
+                        <Link to="/"><h3>ALEASA AWAN {`</>`}</h3></Link>
                     </div>
                     <ul className='NavList'>
                         <li><Link to="/Projects" className='link'>Projects</Link></li>

@@ -1,7 +1,5 @@
-@import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Anton&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Kalnia&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Sono&display=swap);
 
 :root {
   --color-dark: #29335C;
@@ -9,6 +7,7 @@
   --color-red: #E4572E;
   --color-blue: #669BBC;
   --color-cream: #F5E9E2;
+  --color-yellow: #f3f17a;
 }
 
 * {
@@ -30,8 +29,13 @@
   background: linear-gradient(to right, #1d1f1d, #454947);
 }
 
+/* LANDING */
+
 .App-l {
+  margin-top: 50px;
   height: 100vh;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .body-container-l {
@@ -43,7 +47,24 @@
   color: var(--color-blue);
 }
 
+.title {
+  font-size: 100px;
+  margin-left: 20px;
+}
 
+.landing-text {
+  padding: 100px;
+}
+
+.welcome-text {
+  font-weight: bolder;
+  font-family: Sono;
+}
+
+.subtext {
+  font-weight: lighter;
+  font-family: Sono;
+}
 /* NAVBAR */
 
 .NavContainer {
@@ -58,7 +79,7 @@
   align-items: center;
   justify-content: space-between;
   width: 75%;
-  border-bottom: 5px solid var(--color-red);
+  border-bottom: 5px solid var(--color-yellow);
 }
 
 .NavHeading {
@@ -84,7 +105,7 @@
   color: var(--color-green);
 }
 
-/* FOOTER */
+/* FOOTER - CONTACT*/
 
 .FootContainer {
   padding: 10px;
@@ -106,3 +127,56 @@
   background-color: #29335C;
   color: #E4572E;
 } */
+
+/* LEFT-SIDE OF CONTACT */
+.social-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: row;
+}
+
+.social-button {
+  width: 25px;
+  height: 25px;
+  padding-right: 10px;
+}
+/* CONTACT FORM - EMAIL */
+.contact-email {
+  border-bottom: 2px solid var(--color-red);
+  font-size: xx-small;
+  width: 300px;
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.emailbox {
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  flex-grow: 1;
+}
+
+.emailbox:focus {
+  border: none;
+  text-decoration: none;
+  box-shadow: none;
+  outline: none; 
+}
+
+.submit-next {
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+}
+
+.submit-next:hover {
+  color: var(--color-red);
+}
