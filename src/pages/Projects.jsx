@@ -17,12 +17,12 @@ import Apple from '../components/projects/Apple';
 const Projects = () => {
 
     const projectsData = [
-        { name: 'Game/it', image: game, stack: 'Fullstack - Group project', using: 'React, Express.js, SQL' },
-        { name: 'Cats e-commerce', image: cats, stack: 'Frontend', using: 'React' },
-        { name: 'Insta Clone', image: insta, stack: 'Fullstack', using: 'React, Express.js, SQL' },
-        { name: 'Calculator', image: calc, stack: 'Frontend', using: 'React' },
-        { name: 'Drum Kit', image: drum, stack: 'Frontend', using: 'HTML/CSS, Javascript' },
-        { name: 'Apple Clone', image: apple, stack: 'Frontend', using: 'HTML/CSS' },
+        { name: 'Game/it', href: 'https://game-it-uk.netlify.app/', image: game, stack: 'Fullstack - Group project', using: 'React, Express.js, SQL' },
+        { name: 'Cats e-commerce', href: '', image: cats, stack: 'Frontend', using: 'React' },
+        { name: 'Insta Clone', href: '', image: insta, stack: 'Fullstack', using: 'React, Express.js, SQL' },
+        { name: 'Calculator', href: '', image: calc, stack: 'Frontend', using: 'React' },
+        { name: 'Drum Kit', href: '', image: drum, stack: 'Frontend', using: 'HTML/CSS, Javascript' },
+        { name: 'Apple Clone', href: '', image: apple, stack: 'Frontend', using: 'HTML/CSS' },
       ];
 
     return (
@@ -33,7 +33,13 @@ const Projects = () => {
                     <div className='box1-parent'>
                         {projectsData.map((project, index) => (
                             <div className='box1-child' key={index}>
-                                <img src={project.image} alt={project.name} />
+                                <a
+                                    href={project.href}
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                >
+                                <img src={project.image} alt={project.name} className='glow' />
+                                </a>
                                 <h4>{project.name}</h4>
                                 <h5>{project.stack}</h5>
                                 <h5>{project.using}</h5><br />

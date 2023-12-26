@@ -84,6 +84,14 @@ h3 {
     border: 1px solid var(--color-blue);
 }
 
+.glow {
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.glow:hover {
+    box-shadow: 0 0 5px var(--color-grey), 0 0 10px var(--color-grey), 0 0 15px var(--color-cream);
+}
+
 /* BOX 2 */
 
 .pages-box2 {

@@ -29,14 +29,65 @@ li:hover {
     background-color: var(--color-blue);
 }
 
-/* INSIDE MODAL */
+/* OPEN MODAL */
 
 .open-modal {
     height: 150%;
     /* height: 100vh; */
     background-color: #454947;
+    white-space: pre-line;
+    line-height: 18px;
 }
 
+/* INSIDE PROJECTS MODAL */
+
+.modal-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.modal-parent ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 12px;
+    padding: 20px;
+}
+
+.modal-child div {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    color: var(--color-cream);
+    font-family: Sono;
+    font-size: 12px;
+    letter-spacing: normal;
+}
+
+@media (max-width: 767px) {
+    .modal-parent ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.make-bold {
+    font-weight: bolder;
+    color: black;
+    border-bottom: 2px solid var(--color-green); 
+    padding: none;
+}
+
+.project-modal-h4 {
+    color: var(--color-green);
+    padding-top: 20px;
+    text-align: center;
+}
+
+/* INSIDE SKILLS MODAL */
 @media (max-width: 600px) {
     .open-modal {
         height: auto;

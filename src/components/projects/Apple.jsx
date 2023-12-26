@@ -1,12 +1,20 @@
 import '../../components/moreinfo.css';
 import React, { useState } from 'react';
 import Modal from 'react-modal';
+import ProjectModal from './ProjectModal';
 
 const Apple= () => {
 
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const openModal = () => {setModalIsOpen(true);};
     const closeModal = () => {setModalIsOpen(false);};
+
+    const brief = 'something';
+    const description ='hello';
+    const stack = 'fhh';
+    const frontend = 'hgfj';
+    const backend = 'N/A as frontend only';
+    const links = 'gfd h';
 
     return (
         <div>
@@ -19,7 +27,15 @@ const Apple= () => {
                 contentLabel="Apple Clone Modal"
             >
                 <div className='open-modal'>
-                    <h4>Apple Clone</h4>
+                    <h4 className='project-modal-h4'>Apple Clone</h4>
+                    <ProjectModal  
+                        brief={brief} 
+                        description={description}
+                        stack={stack}
+                        frontend={frontend}
+                        backend={backend}
+                        links={links}
+                    />
                 </div>
             </Modal>
         </div>
