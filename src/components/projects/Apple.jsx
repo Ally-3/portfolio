@@ -9,12 +9,15 @@ const Apple= () => {
     const openModal = () => {setModalIsOpen(true);};
     const closeModal = () => {setModalIsOpen(false);};
 
-    const brief = 'something';
-    const description ='hello';
-    const stack = 'fhh';
-    const frontend = 'hgfj';
-    const backend = 'N/A as frontend only';
-    const links = 'gfd h';
+    const brief = ['CodeNation - Week 1: Website Clone'];
+    const description =['A clone of the Apple homepage'];
+    const stack = ['Frontend only: Basic HTML/CSS and JavaScript'];
+    const frontend = ['Using new skills of HTML and CSS'];
+    const backend = ['N/A as frontend only'];
+    const links = [
+        'Netlify',
+        'GitHub - frontend and backend',
+    ];
 
     return (
         <div>
@@ -29,12 +32,12 @@ const Apple= () => {
                 <div className='open-modal'>
                     <h4 className='project-modal-h4'>Apple Clone</h4>
                     <ProjectModal  
-                        brief={brief} 
-                        description={description}
-                        stack={stack}
-                        frontend={frontend}
-                        backend={backend}
-                        links={links}
+                        brief={brief.join('\n')} 
+                        description={description.join('\n')}
+                        stack={stack.join('\n')}
+                        frontend={frontend.join('\n')}
+                        backend={backend.join('\n')}
+                        links={links.join('\n')}
                     />
                 </div>
             </Modal>

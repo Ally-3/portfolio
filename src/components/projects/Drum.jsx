@@ -9,12 +9,21 @@ const Drum = () => {
     const openModal = () => {setModalIsOpen(true);};
     const closeModal = () => {setModalIsOpen(false);};
 
-    const brief = 'something';
-    const description ='hello';
-    const stack = 'fhh';
-    const frontend = 'hgfj';
-    const backend = 'N/A as frontend only';
-    const links = 'gfd h';
+    const brief = [
+        'CodeNation - Week 3: JS DOM', '',
+        'Making a Drum Kit with onClick/onPress commands',
+    ];
+    const description =['A Drum Kit App'];
+    const stack = ['Frontend only: Basic HTML/CSS and JavaScript'];
+    const frontend = [
+        'Functionality:',
+            '• Keypress function',
+    ];
+    const backend = ['N/A as frontend only'];
+    const links = [
+        'Netlify',
+        'GitHub - frontend and backend',
+    ];
 
     return (
         <div>
@@ -29,13 +38,13 @@ const Drum = () => {
                 <div className='open-modal'>
                     <h4 className='project-modal-h4'>Drum Kit</h4>
                     <ProjectModal  
-                        brief={brief} 
-                        description={description}
-                        stack={stack}
-                        frontend={frontend}
-                        backend={backend}
-                        links={links}
-                    />
+                        brief={brief.join('\n')} 
+                        description={description.join('\n')}
+                        stack={stack.join('\n')}
+                        frontend={frontend.join('\n')}
+                        backend={backend.join('\n')}
+                        links={links.join('\n')}
+                    /> 
                 </div>
             </Modal>
         </div>

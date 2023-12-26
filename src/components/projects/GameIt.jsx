@@ -10,8 +10,8 @@ const GameIt = () => {
     const closeModal = () => {setModalIsOpen(false);};
 
     const brief = [
-        'Final project - group project',
-        '',
+        'CodeNation - Week 11-12: React JS Intermediate','',
+        'Final project - group project','',
         'Making a full stack application with MERN/SERN',
     ];
     const description =[

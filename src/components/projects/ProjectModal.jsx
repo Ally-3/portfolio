@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../../components/moreinfo.css';
 
 const ProjectModal = (props) => {
-    const [activeSection, setActiveSection] = useState('DESCRIPTION');
+    const [activeSection, setActiveSection] = useState('BRIEF');
 
     const handleItemClick = (section) => {
         console.log('Item clicked:', section);

@@ -9,12 +9,26 @@ const Calc= () => {
     const openModal = () => {setModalIsOpen(true);};
     const closeModal = () => {setModalIsOpen(false);};
 
-    const brief = 'something';
-    const description ='hello';
-    const stack = 'fhh';
-    const frontend = 'hgfj';
-    const backend = 'N/A as frontend only';
-    const links = 'gfd h';
+    const brief = [
+        'CodeNation - Week 5: React JS Fundamentals', '',
+        'Making a calculator',
+    ];
+    const description =['A calculator made in React'];
+    const stack = ['Front-end only: React'];
+    const frontend = [
+        'Built with React', '',
+    
+        'API:', 
+            '• MathJS library','',
+
+        'Dynamic information:',
+            '• Calculates values based on keys pressed',
+    ];
+    const backend = ['N/A as frontend only'];
+    const links = [
+        'Netlify',
+        'GitHub - frontend and backend',
+    ];
 
     return (
         <div>
@@ -29,12 +43,12 @@ const Calc= () => {
                 <div className='open-modal'>
                     <h4 className='project-modal-h4'>Calculator</h4>
                     <ProjectModal  
-                        brief={brief} 
-                        description={description}
-                        stack={stack}
-                        frontend={frontend}
-                        backend={backend}
-                        links={links}
+                        brief={brief.join('\n')} 
+                        description={description.join('\n')}
+                        stack={stack.join('\n')}
+                        frontend={frontend.join('\n')}
+                        backend={backend.join('\n')}
+                        links={links.join('\n')}
                     />
                 </div>
             </Modal>
