@@ -5,6 +5,7 @@
   --color-dark: #29335C;
   --color-green: #00FF88;
   --color-red: #E4572E;
+  --color-orange: #be421d;
   --color-blue: #669BBC;
   --color-cream: #F5E9E2;
   --color-yellow: #f3f17a;
@@ -27,6 +28,7 @@
   text-align: center;
   height: 100%;
   background: linear-gradient(to right, #1d1f1d, #454947);
+  /* background: var(--color-orange); */
 }
 
 /* LANDING */
@@ -48,7 +50,7 @@
 }
 
 .title {
-  font-size: 100px;
+  font-size: 80px;
   margin-left: 20px;
 }
 
@@ -105,6 +107,12 @@
   color: var(--color-green);
 }
 
+.link.active {
+  color: var(--color-green);
+  font-weight: bold;
+  margin: auto;
+}
+
 /* FOOTER - CONTACT*/
 
 .FootContainer {
@@ -140,10 +148,18 @@
 }
 
 .social-button {
-  width: 25px;
-  height: 25px;
-  padding-right: 10px;
+  width: 30px;
+  height: 30px;
+  /* padding-right: 10px; */
+  border-radius: 100%;
+  margin-right: 20px;
+  transition: box-shadow 0.2s ease-in-out;
 }
+
+.social-button:hover {
+  box-shadow: 0 0 5px var(--color-grey), 0 0 10px var(--color-grey), 0 0 15px var(--color-red);
+}
+
 /* CONTACT FORM - EMAIL */
 .contact-email {
   border-bottom: 2px solid var(--color-red);

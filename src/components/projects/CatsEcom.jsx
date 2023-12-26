@@ -26,7 +26,7 @@ const CatsEcom= () => {
             '• Adding cats to basket',
             '• Removing cat from basket',
             '• Displaying images using the API',
-            `• Displays 'in basket' when cat is added to basket`  ,
+            `• Displays 'in basket' when cat is added to basket`,
     ];
     const backend = ['N/A as frontend only'];
     const links = [

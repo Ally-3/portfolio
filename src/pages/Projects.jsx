@@ -1,11 +1,14 @@
 import '../App.css';
 import './pages.css';
+
 import game from '../images/game-l.png';
 import cats from '../images/cats-m.png';
 import insta from '../images/insta-s.png';
 import apple from '../images/apple-l.png';
 import calc from '../images/calc-s.png';
 import drum from '../images/drum-s.png';
+import GitHub from '../images/github1.png';
+
 import GameIt from '../components/projects/GameIt';
 import CatsEcom from '../components/projects/CatsEcom';
 import Insta from '../components/projects/Insta';
@@ -17,12 +20,17 @@ import Apple from '../components/projects/Apple';
 const Projects = () => {
 
     const projectsData = [
-        { name: 'Game/it', href: 'https://game-it-uk.netlify.app/', image: game, stack: 'Fullstack - Group project', using: 'React, Express.js, SQL' },
-        { name: 'Cats e-commerce', href: '', image: cats, stack: 'Frontend', using: 'React' },
-        { name: 'Insta Clone', href: '', image: insta, stack: 'Fullstack', using: 'React, Express.js, SQL' },
-        { name: 'Calculator', href: '', image: calc, stack: 'Frontend', using: 'React' },
-        { name: 'Drum Kit', href: '', image: drum, stack: 'Frontend', using: 'HTML/CSS, Javascript' },
-        { name: 'Apple Clone', href: '', image: apple, stack: 'Frontend', using: 'HTML/CSS' },
+        { name: 'Game/it', git:'https://github.com/Ally-3/game-it-frontend', href: 'https://game-it-uk.netlify.app/', image: game, stack: 'Fullstack - Group project', using: 'React, Express.js, SQL' },
+
+        { name: 'Cats e-commerce', git:'https://github.com/Ally-3/cats-ecommerce', href: 'https://purrfect-planet.netlify.app/', image: cats, stack: 'Frontend', using: 'React' },
+
+        { name: 'Insta Clone', git:'https://github.com/Ally-3/instaclone', href: 'https://insta-clone-m52.netlify.app/', image: insta, stack: 'Fullstack', using: 'React, Express.js, SQL' },
+
+        { name: 'Calculator', git:'https://github.com/Ally-3/Calculator', href: 'https://calculator-ally.netlify.app/', image: calc, stack: 'Frontend', using: 'React' },
+
+        { name: 'Drum Kit', git:'https://github.com/Ally-3/Drumkit', href: 'https://drum-kit-ally.netlify.app/', image: drum, stack: 'Frontend', using: 'HTML/CSS, Javascript' },
+
+        { name: 'Apple Clone', git:'https://github.com/Ally-3/Apple-clone', href: 'https://apple-clone-ally.netlify.app/', image: apple, stack: 'Frontend', using: 'HTML/CSS' },
       ];
 
     return (
@@ -40,7 +48,16 @@ const Projects = () => {
                                 >
                                 <img src={project.image} alt={project.name} className='glow' />
                                 </a>
-                                <h4>{project.name}</h4>
+                                <div className='h4-row'>
+                                    <h4>{project.name}</h4>
+                                        <a 
+                                        href={project.git}       
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        > 
+                                            <img className="git-button" src={GitHub} alt='github' />
+                                        </a>
+                                </div> 
                                 <h5>{project.stack}</h5>
                                 <h5>{project.using}</h5><br />
                             </div>

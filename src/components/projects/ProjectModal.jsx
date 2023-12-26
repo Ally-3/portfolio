@@ -5,11 +5,10 @@ const ProjectModal = (props) => {
     const [activeSection, setActiveSection] = useState('BRIEF');
 
     const handleItemClick = (section) => {
-        console.log('Item clicked:', section);
         setActiveSection(section);
     };
 
-    const sections = ['BRIEF', 'DESCRIPTION', 'STACK', 'FRONTEND', 'BACKEND', 'LINKS'];
+    const sections = ['BRIEF', 'DESCRIPTION', 'STACK', 'FRONTEND', 'BACKEND', 'HOST'];
 
     const headingSection = (section) => (
         <li
@@ -33,7 +32,7 @@ const ProjectModal = (props) => {
             return <div>{props.frontend}</div>;
         case 'BACKEND':
             return <div>{props.backend}</div>;
-        case 'LINKS':
+        case 'HOST':
             return <div>{props.links}</div>;
         default:
             return null;

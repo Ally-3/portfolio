@@ -92,6 +92,24 @@ h3 {
     box-shadow: 0 0 5px var(--color-grey), 0 0 10px var(--color-grey), 0 0 15px var(--color-cream);
 }
 
+.h4-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
+}
+a .git-button {
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 100%;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+a .git-button:hover {
+    box-shadow: 0 0 5px var(--color-grey), 0 0 7px var(--color-yellow), 0 0 10px var(--color-yellow);
+}
+
 /* BOX 2 */
 
 .pages-box2 {

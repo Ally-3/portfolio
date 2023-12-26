@@ -14,8 +14,8 @@ const Landing = () => {
                             <span className='highlight-text'>Seeking Junior Developer Role</span>
                         </span>
                     </p>
-                    <h1 className='title'>ALEASA</h1>
-                    <h1 className='title'>AWAN{`</>`}</h1>
+                    <h1 className='title'>{`<`}ALEASA</h1>
+                    <h1 className='title'>AWAN{` />`}</h1>
                 </div>
             </div>
         </div>

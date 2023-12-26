@@ -58,7 +58,7 @@ li:hover {
 .modal-child div {
     padding: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     text-align: left;
     color: var(--color-cream);
     font-family: Sono;
