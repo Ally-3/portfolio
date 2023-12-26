@@ -130,12 +130,6 @@
   border-top: 5px solid var(--color-green);
 }
 
-/*
-.FootContainer .NavHeading, .FootContainer h3 {
-  background-color: #29335C;
-  color: #E4572E;
-} */
-
 /* LEFT-SIDE OF CONTACT */
 .social-column {
   display: flex;
