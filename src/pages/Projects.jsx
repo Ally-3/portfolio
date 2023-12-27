@@ -57,7 +57,7 @@ const Projects = () => {
                                 <div className='h4-row'>
                                     <h4>{project.name}</h4>
                                     <div>
-                                        <div className='hide-info'>{project.info && (<project.info />)}</div>
+                                        <h5 className='hide-info'> {project.info && (<project.info />)}</h5>
 
                                         <a 
                                             href={project.git}       

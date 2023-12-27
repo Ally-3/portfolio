@@ -1,6 +1,6 @@
 import '../App.css';
 import './pages.css';
-import React, { useState } from 'react';
+import React from 'react';
 import '../components/moreinfo.css';
 
 import CrimSec from '../components/skills/CrimSec';
@@ -8,9 +8,6 @@ import HMRC from '../components/skills/HMRC';
 import SoftwareBC from '../components/skills/SoftwareBC';
 
 const Skills = () => {
-
-    const [modalIsOpen, setModalIsOpen] = useState(false);
-    const openModal = () => {setModalIsOpen(true);};
 
     const skillsData = [
         { 

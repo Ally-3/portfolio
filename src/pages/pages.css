@@ -69,6 +69,19 @@ h3 {
     display: none; /* Initially hide the content */
 }
 
+.small-info {
+    text-align: center;
+    transition: box-shadow 0.3s ease-in-out;
+    font-style: italic;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.small-info:hover {
+    border-radius: 100%;
+    background-color: var(--color-yellow);
+    color: var(--color-blue);
+    box-shadow: 0 0 5px var(--color-grey), 0 0 7px var(--color-grey), 0 0 10px var(--color-cream);
+}
 
 @media (min-width: 768px) {
     /* Show pages-box2 on screens wider than 768px */
@@ -78,6 +91,12 @@ h3 {
   
     .small-info {
       display: none; /* Hide small-info on screens wider than 768px */
+    }
+}
+
+@media (max-width: 768px) {
+    .hide-info {
+        display: block;
     }
 }
 
