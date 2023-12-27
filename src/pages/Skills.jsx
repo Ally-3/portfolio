@@ -1,11 +1,16 @@
 import '../App.css';
-// import './pages.css';
-import '../components/moreinfo.css'
+import './pages.css';
+import React, { useState } from 'react';
+import '../components/moreinfo.css';
+
 import CrimSec from '../components/skills/CrimSec';
 import HMRC from '../components/skills/HMRC';
 import SoftwareBC from '../components/skills/SoftwareBC';
 
 const Skills = () => {
+
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+    const openModal = () => {setModalIsOpen(true);};
 
     const skillsData = [
         { 
@@ -18,6 +23,7 @@ const Skills = () => {
             hard_skills: 'FULLSTACK, HTML/CSS, JAVASCRIPT, NODE.JS, EXPRESS.JS, REACT, SQL, MONGO DB',
             soft_skills: '',
             info: `Joined the 12-week Master Software Development Skills Bootcamp. Equivalent to a Level 3 qualification, the learning provided an understanding of front-end and back-end languages, and learning how to build full-stack applications.`,
+            more: SoftwareBC,
         },
         { 
             date: '12 JUNE 2023 to 12 OCT 2023',
@@ -26,6 +32,7 @@ const Skills = () => {
             soft_skills: `Audio typing, writing to clients via letter or email, contacting police/CPS`,
             info: `Wanted to expand my skill-set and work in a new 
             environment within the criminal sector for interest.`,
+            more: CrimSec,
         },
         { 
             date: '19 SEP 2016 to 01 JUN 2023',
@@ -33,6 +40,7 @@ const Skills = () => {
             hard_skills: '',
             soft_skills: `Decision making and effective communication, flexibility, time management, reviewing and understanding, planning and mentoring`,
             info: `Worked in the customer services sector. My roles included admin services, customer service and pre-appeals.`,
+            more: HMRC,
         },
     ];
 
@@ -48,16 +56,19 @@ const Skills = () => {
                             <h5 className='skills-hard'>{skills.hard_skills}</h5>
                             <h5 className='skills-soft'>{skills.soft_skills}</h5>
                             <h5 className='skills-info'>{skills.info}</h5>
+                            <div className='hide-info'>{skills.more && (<skills.more />)}</div>
                         </div>
                         ))}
                 </div>
                 <br />
-                <div className='skills-box2'>
+                <div className='pages-box2'>
                     <ul>
                         <h3>MORE INFO</h3>
-                        <li><SoftwareBC /></li>
-                        <li><CrimSec /></li>
-                        <li><HMRC /></li>
+                        <button className="openModal-button" onClick={openModal} modalIsOpen={modalIsOpen} >
+                            <li>Software Bootcamp<SoftwareBC /></li>
+                            <li>Criminal Secretary<CrimSec /></li>
+                            <li>HMRC - Admin Officer<HMRC /></li>
+                        </button>
                     </ul>
                 </div>
             </div>

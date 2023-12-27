@@ -1,5 +1,7 @@
 import '../App.css';
 import './pages.css';
+// import Modal from 'react-modal';
+import React, { useState } from 'react';
 
 import game from '../images/game-l.png';
 import cats from '../images/cats-m.png';
@@ -19,18 +21,22 @@ import Apple from '../components/projects/Apple';
 
 const Projects = () => {
 
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+    const openModal = () => {setModalIsOpen(true);};
+    // const closeModal = () => {setModalIsOpen(false);};
+
     const projectsData = [
-        { name: 'Game/it', git:'https://github.com/Ally-3/game-it-frontend', href: 'https://game-it-uk.netlify.app/', image: game, stack: 'Fullstack - Group project', using: 'React, Express.js, SQL' },
+        { name: 'Game/it', info: GameIt, git:'https://github.com/Ally-3/game-it-frontend', href: 'https://game-it-uk.netlify.app/', image: game, stack: 'Fullstack - Group project', using: 'React, Express.js, SQL' },
 
-        { name: 'Cats e-commerce', git:'https://github.com/Ally-3/cats-ecommerce', href: 'https://purrfect-planet.netlify.app/', image: cats, stack: 'Frontend', using: 'React' },
+        { name: 'Cats e-commerce', info: CatsEcom, git:'https://github.com/Ally-3/cats-ecommerce', href: 'https://purrfect-planet.netlify.app/', image: cats, stack: 'Frontend', using: 'React' },
 
-        { name: 'Insta Clone', git:'https://github.com/Ally-3/instaclone', href: 'https://insta-clone-m52.netlify.app/', image: insta, stack: 'Fullstack', using: 'React, Express.js, SQL' },
+        { name: 'Insta Clone', info: Insta, git:'https://github.com/Ally-3/instaclone', href: 'https://insta-clone-m52.netlify.app/', image: insta, stack: 'Fullstack', using: 'React, Express.js, SQL' },
 
-        { name: 'Calculator', git:'https://github.com/Ally-3/Calculator', href: 'https://calculator-ally.netlify.app/', image: calc, stack: 'Frontend', using: 'React' },
+        { name: 'Calculator', info: Calc, git:'https://github.com/Ally-3/Calculator', href: 'https://calculator-ally.netlify.app/', image: calc, stack: 'Frontend', using: 'React' },
 
-        { name: 'Drum Kit', git:'https://github.com/Ally-3/Drumkit', href: 'https://drum-kit-ally.netlify.app/', image: drum, stack: 'Frontend', using: 'HTML/CSS, Javascript' },
+        { name: 'Drum Kit', info: Drum, git:'https://github.com/Ally-3/Drumkit', href: 'https://drum-kit-ally.netlify.app/', image: drum, stack: 'Frontend', using: 'HTML/CSS, Javascript' },
 
-        { name: 'Apple Clone', git:'https://github.com/Ally-3/Apple-clone', href: 'https://apple-clone-ally.netlify.app/', image: apple, stack: 'Frontend', using: 'HTML/CSS' },
+        { name: 'Apple Clone', info: Apple, git:'https://github.com/Ally-3/Apple-clone', href: 'https://apple-clone-ally.netlify.app/', image: apple, stack: 'Frontend', using: 'HTML/CSS' },
       ];
 
     return (
@@ -50,13 +56,17 @@ const Projects = () => {
                                 </a>
                                 <div className='h4-row'>
                                     <h4>{project.name}</h4>
+                                    <div>
+                                        <div className='hide-info'>{project.info && (<project.info />)}</div>
+
                                         <a 
-                                        href={project.git}       
-                                        target="_blank" 
-                                        rel="noopener noreferrer"
+                                            href={project.git}       
+                                            target="_blank" 
+                                            rel="noopener noreferrer"
                                         > 
                                             <img className="git-button" src={GitHub} alt='github' />
                                         </a>
+                                    </div>
                                 </div> 
                                 <h5>{project.stack}</h5>
                                 <h5>{project.using}</h5><br />
@@ -68,12 +78,14 @@ const Projects = () => {
                 <div className='pages-box2'>
                     <ul>
                         <h3>MORE INFO</h3>
-                        <li><GameIt /></li>
-                        <li><CatsEcom /></li>
-                        <li><Insta /></li>
-                        <li><Calc /></li>
-                        <li><Drum /></li>
-                        <li><Apple /></li>
+                        <button className="openModal-button" onClick={openModal} modalIsOpen={modalIsOpen} >
+                            <li>Game/it <GameIt /></li>
+                            <li>Cats e-commerce<CatsEcom /></li>
+                            <li>Insta Clone<Insta /></li>
+                            <li>Calculator<Calc /></li>
+                            <li>Drum Kit<Drum /></li>
+                            <li>Apple Clone<Apple /></li>
+                        </button>
                     </ul>
                 </div>
             </div>

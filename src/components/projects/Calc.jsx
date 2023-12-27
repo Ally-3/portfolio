@@ -33,7 +33,10 @@ const Calc= () => {
     return (
         <div>
             <button className="openModal-button" onClick={openModal}>
-                <li>Calculator</li>
+                {/* <li>Calculator</li> */}
+            </button>
+            <button className="openModal-button-2 small-screen" onClick={openModal}>
+                <li className='small-info'>i</li>
             </button>
             <Modal
                 isOpen={modalIsOpen}

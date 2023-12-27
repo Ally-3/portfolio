@@ -17,6 +17,27 @@
     border: none;
     width: 100%;
     padding: 10px;
+    display: inline-block; /* Initially show the button */
+}
+
+.openModal-button-2 {
+    display: none; /* Initially hide the button */
+    color: black;
+    background-color: var(--color-yellow);
+    border: none;
+    border-radius: 100%;
+    font-weight: bold;
+    height: 1.5em;
+    width: 1.5em;
+}
+
+@media screen and (max-width: 768px) {
+    .openModal-button {
+        display: none; /* Hide the button for small screens */
+    }
+    .openModal-button-2.small-screen {
+        display: inline-block; /* Show the button for small screens */
+    }
 }
 
 .openModal-button :hover {
@@ -97,26 +118,27 @@ li:hover {
 .modal-h3 {
     color: var(--color-green);
     font-weight: bolder;
+    text-align: center;
     margin: 10px;
 }
 
 .modal-h4 {
-    color: var(--color-yellow);
+    color: var(--color-blue);
     margin: 10px;
     padding-top: 20px;
 }
 
 .modal-h5 {
-    color: var(--color-blue);
-    font-family: Sono;
+    color: var(--color-cream);
+    font-family: 'Sono';
     letter-spacing: normal;
     margin: 10px;
 }
 
 .modal-find {
-    color: var(--color-yellow);
+    color: var(--color-blue);
     font-size: small;
-    font-family: Sono;
+    font-family: 'Sono';
     letter-spacing: normal;
     margin: 10px;
 }
@@ -136,11 +158,12 @@ li:hover {
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    /* height: 100vh; */
+    height: 100vh;
     margin: 20px;
     /* border: 2px solid #29335C; */
     background-color: transparent;
 }
+
 
 .skills-h3 {
     color: var(--color-green);
@@ -151,15 +174,18 @@ li:hover {
 .skills-date {
     padding-top: 20px;
     color: var(--color-yellow);
+    text-align: left;
 }
 
 .skills-job {
     color: var(--color-yellow);
     padding-bottom: 5px;
+    text-align: left;
 }
 
 .skills-hard, .skills-soft {
     color: var(--color-green);
+    text-align: left;
 }
 
 .skills-info {
@@ -168,6 +194,7 @@ li:hover {
     font-size: small;
     line-height: 20px;
     letter-spacing: normal;
+    text-align: left;
 }
 
 .skills-date, .skills-job, .skills-info, .skills-hard, .skills-soft {
@@ -182,6 +209,18 @@ li:hover {
     width: 25%;
     /* margin: 10px 10px 10px 20px; */
     font-weight: bold;
+}
+
+
+@media (min-width: 768px) {
+    /* Show pages-box2 on screens wider than 768px */
+    .skills-box2 {
+      display: block;
+    }
+  
+    .small-info-skills {
+      display: none; /* Hide small-info on screens wider than 768px */
+    }
 }
 
 .skills-box2 h3 {

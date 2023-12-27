@@ -11,8 +11,7 @@ const CrimSec = () => {
     const cvData = [
         {
             skill: `Proficient with the Office Suite (Word, Excel, Outlook)`,
-            info: `Preparation of correspondence and documents through audio typing and word
-            processing`,
+            info: `Preparation of correspondence and documents through audio typing and word processing`,
         },
         {
             skill: 'Telephony',
@@ -31,7 +30,10 @@ const CrimSec = () => {
     return (
         <div>
             <button className="openModal-button" onClick={openModal}>
-                <li>Criminal Secretary</li>
+                {/* <li>Criminal Secretary</li> */}
+            </button>
+            <button className="openModal-button-2 small-screen" onClick={openModal}>
+                <li className='small-info-skills'>i</li>
             </button>
             <Modal
                 isOpen={modalIsOpen}

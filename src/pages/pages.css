@@ -23,6 +23,7 @@
     /* padding: 20px; */
     /* height: 100vh; */
     background-color: transparent;
+    text-align: left;
 }
 
 h3 {
@@ -38,7 +39,6 @@ h3 {
     align-items: flex-start;
 
     width: 100%;
-    margin: 10px;
     margin: 20px;
     /* border: 2px solid #29335C; */
     background-color: transparent;
@@ -46,7 +46,7 @@ h3 {
 }
 
 .pages-box1 h3 {
-    margin-left: 10px;
+    padding-left: 10px;
 }
 
 .box1-parent {
@@ -60,20 +60,25 @@ h3 {
 }
 
 .box1-child {
-    flex: 1 0 calc(33.333% - 20px); /* Set the flex basis to 33.333% with some margin */
-    box-sizing: border-box; /* Include padding and border in the width calculation */
-    padding: 10px;
+    /* flex: 1 0 clamp(300px, 33.333%, calc(100% - 20px));  */
+    flex: 1 0 clamp(calc(100% - 20px)); 
+    box-sizing: border-box;
+    padding: 10px; 
 }
 
-@media (max-width: 767px) {
-    .box1-child {
-        flex-basis: calc(50% - 20px); /* Two items per row on screens 767px and smaller */
+.hide-info {
+    display: none; /* Initially hide the content */
+}
+
+
+@media (min-width: 768px) {
+    /* Show pages-box2 on screens wider than 768px */
+    .pages-box2 {
+      display: block;
     }
-}
-
-@media (max-width: 600px) {
-    .box1-child {
-        flex-basis: calc(100% - 20px); /* One item per row on screens 600px and smaller */
+  
+    .small-info {
+      display: none; /* Hide small-info on screens wider than 768px */
     }
 }
 
@@ -97,7 +102,15 @@ h3 {
     flex-direction: row;
     justify-content: space-between;
     width: 300px;
+    height: 2em;
 }
+
+.h4-row div {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
 a .git-button {
     width: 20px;
     height: 20px;
@@ -118,6 +131,15 @@ a .git-button:hover {
     width: 25%;
     /* margin: 10px 10px 10px 20px; */
     font-weight: bold;
+    display: inline-block; 
+    text-align: left;
+}
+
+
+@media screen and (max-width: 768px) {
+    .pages-box2 {
+        display: none; /* Hide the button for small screens */
+    }
 }
 
 .pages-box2 h3 {
