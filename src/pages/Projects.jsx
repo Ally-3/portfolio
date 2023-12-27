@@ -1,7 +1,7 @@
 import '../App.css';
 import './pages.css';
 // import Modal from 'react-modal';
-import React, { useState } from 'react';
+import React from 'react';
 
 import game from '../images/game-l.png';
 import cats from '../images/cats-m.png';
@@ -20,10 +20,6 @@ import Apple from '../components/projects/Apple';
 
 
 const Projects = () => {
-
-    const [modalIsOpen, setModalIsOpen] = useState(false);
-    const openModal = () => {setModalIsOpen(true);};
-    // const closeModal = () => {setModalIsOpen(false);};
 
     const projectsData = [
         { name: 'Game/it', info: GameIt, git:'https://github.com/Ally-3/game-it-frontend', href: 'https://game-it-uk.netlify.app/', image: game, stack: 'Fullstack - Group project', using: 'React, Express.js, SQL' },
