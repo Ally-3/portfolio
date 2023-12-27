@@ -16,8 +16,13 @@
     /* text-decoration: none; */
     border: none;
     width: 100%;
-    padding: 10px;
+    padding: 20px 10px;
     display: inline-block; /* Initially show the button */
+}
+
+.openModal-button:hover {
+    background-color: var(--color-blue);
+    color: var(--color-yellow);
 }
 
 .openModal-button-2 {

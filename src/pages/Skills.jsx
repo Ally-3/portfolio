@@ -64,11 +64,11 @@ const Skills = () => {
                 <div className='pages-box2'>
                     <ul>
                         <h3>MORE INFO</h3>
-                        <button className="openModal-button" onClick={openModal} modalIsOpen={modalIsOpen} >
-                            <li>Software Bootcamp<SoftwareBC /></li>
-                            <li>Criminal Secretary<CrimSec /></li>
-                            <li>HMRC - Admin Officer<HMRC /></li>
-                        </button>
+                        <div >
+                            <p><SoftwareBC /></p>
+                            <p><CrimSec /></p>
+                            <p><HMRC /></p>
+                        </div>
                     </ul>
                 </div>
             </div>

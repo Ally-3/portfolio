@@ -37,7 +37,7 @@ const CatsEcom= () => {
     return (
         <div>
             <button className="openModal-button" onClick={openModal}>
-                {/* <li>Cats e-commerce</li> */}
+                Cats e-commerce
             </button>
             <button className="openModal-button-2 small-screen" onClick={openModal}>
                 <li className='small-info'>i</li>

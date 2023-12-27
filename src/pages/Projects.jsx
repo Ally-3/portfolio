@@ -78,14 +78,14 @@ const Projects = () => {
                 <div className='pages-box2'>
                     <ul>
                         <h3>MORE INFO</h3>
-                        <button className="openModal-button" onClick={openModal} modalIsOpen={modalIsOpen} >
-                            <li>Game/it <GameIt /></li>
-                            <li>Cats e-commerce<CatsEcom /></li>
-                            <li>Insta Clone<Insta /></li>
-                            <li>Calculator<Calc /></li>
-                            <li>Drum Kit<Drum /></li>
-                            <li>Apple Clone<Apple /></li>
-                        </button>
+                        <div>
+                            <p><GameIt /></p>
+                            <p><CatsEcom /></p>
+                            <p><Insta /></p>
+                            <p><Calc /></p>
+                            <p><Drum /></p>
+                            <p><Apple /></p>
+                        </div>
                     </ul>
                 </div>
             </div>

@@ -67,7 +67,7 @@ const GameIt = () => {
         <div>
 
             <button className="openModal-button" onClick={openModal}>
-                {/* <li>Game\it</li> */}
+                Game/it
             </button>
 
             <button className="openModal-button-2 small-screen" onClick={openModal}>

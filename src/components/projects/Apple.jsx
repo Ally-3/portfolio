@@ -22,7 +22,7 @@ const Apple= () => {
     return (
         <div>
             <button className="openModal-button" onClick={openModal}>
-                {/* <li>Apple Clone</li> */}
+                Apple Clone
             </button>
             <button className="openModal-button-2 small-screen" onClick={openModal}>
                 <li className='small-info'>i</li>

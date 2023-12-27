@@ -54,7 +54,7 @@ const Insta= () => {
     return (
         <div>
             <button className="openModal-button" onClick={openModal}>
-                {/* <li>Insta Clone</li> */}
+                Insta Clone
             </button>
             <button className="openModal-button-2 small-screen" onClick={openModal}>
                 <li className='small-info'>i</li>
