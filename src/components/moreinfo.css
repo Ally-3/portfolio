@@ -81,15 +81,21 @@ li:hover {
     padding: 20px;
 }
 
+.modal-child {
+    height: 100vh;
+}
+
 .modal-child div {
     padding: 20px;
     display: flex;
+    flex-direction: column; 
     justify-content: space-evenly;
     text-align: left;
     color: var(--color-cream);
-    font-family: Sono;
+    font-family: 'Sono';
     font-size: 12px;
     letter-spacing: normal;
+    background-color: #454947;
 }
 
 @media (max-width: 767px) {
