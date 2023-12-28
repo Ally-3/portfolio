@@ -71,16 +71,19 @@ h3 {
 
 .small-info {
     text-align: center;
+    border-radius: 100%;
     transition: box-shadow 0.3s ease-in-out;
     font-style: italic;
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
+.small-info-skills {
+    margin-left: 10px;
+}
 .small-info:hover {
-    border-radius: 100%;
     background-color: var(--color-yellow);
     color: var(--color-blue);
-    box-shadow: 0 0 5px var(--color-grey), 0 0 7px var(--color-grey), 0 0 10px var(--color-cream);
+    box-shadow: 0 0 5px var(--color-cream), 0 0 7px var(--color-cream), 0 0 10px var(--color-cream);
 }
 
 @media (min-width: 768px) {

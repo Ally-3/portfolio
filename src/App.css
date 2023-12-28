@@ -100,7 +100,7 @@ body {
   border-bottom: 5px solid var(--color-yellow);
 }
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
   .NavWrapper {
       width: 100%;
   }
@@ -151,7 +151,7 @@ body {
   border-top: 5px solid var(--color-green);
 }
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
   .FootWrapper {
       width: 100%;
   }

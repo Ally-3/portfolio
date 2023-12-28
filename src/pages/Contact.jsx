@@ -39,7 +39,7 @@ const Contact = () => {
                                         <input
                                             className="emailbox"
                                             type="email"
-                                            placeholder="Enter your email address"
+                                            placeholder="Enter your email"
                                             value={email}
                                             required
                                             onChange={handleChange}

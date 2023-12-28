@@ -54,7 +54,7 @@ const SoftwareBC = () => {
             <button className="openModal-button" onClick={openModal}>
                 Software Bootcamp
             </button>
-            <button className="openModal-button-2 small-screen" onClick={openModal}>
+            <button className="openModal-button-2 small-screen small-info-skills" onClick={openModal}>
                 <li className='small-info'>i</li>
             </button>
             <Modal
