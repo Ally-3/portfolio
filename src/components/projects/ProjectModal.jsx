@@ -8,7 +8,7 @@ const ProjectModal = (props) => {
         setActiveSection(section);
     };
 
-    const sections = ['BRIEF', 'DESCRIPTION', 'STACK', 'FRONTEND', 'BACKEND', 'HOST'];
+    const sections = ['BRIEF', 'DESCRIPTION', 'STACK', 'FRONTEND', 'BACKEND', 'LINKS'];
 
     const headingSection = (section) => (
         <li
@@ -32,7 +32,7 @@ const ProjectModal = (props) => {
             return <div>{props.frontend}</div>;
         case 'BACKEND':
             return <div>{props.backend}</div>;
-        case 'HOST':
+        case 'LINKS':
             return <div>{props.links}</div>;
         default:
             return null;
