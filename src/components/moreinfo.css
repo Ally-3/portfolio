@@ -168,7 +168,7 @@ li:hover {
     box-sizing: border-box;
     display: flex;
     /* padding: 20px; */
-    /* height: 100vh;  */
+    /* height: 100%;  */
     background-color: transparent;
 }
 
@@ -242,6 +242,12 @@ li:hover {
   
     .small-info-skills {
       display: none; /* Hide small-info on screens wider than 768px */
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-box1 {
+        height: 100%;
     }
 }
 

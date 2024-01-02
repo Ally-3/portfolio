@@ -37,7 +37,15 @@ const HMRC = () => {
                 HMRC - Admin Officer
             </button>
             <button className="openModal-button-2 small-screen small-info-skills" onClick={openModal}>
-                <li className='small-info'>i</li>
+                <span>
+                    <li style={{ 
+                        color: '#1C1C23', 
+                        textAlign: 'center', 
+                        fontStyle: 'italic',
+                        fontFamily: 'Georgia, Times New Roman, Times, serif',
+                    }}
+                    >i</li>
+                </span>
             </button>
             <Modal
                 isOpen={modalIsOpen}
