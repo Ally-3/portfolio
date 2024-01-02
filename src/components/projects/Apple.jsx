@@ -24,8 +24,16 @@ const Apple= () => {
             <button className="openModal-button" onClick={openModal}>
                 Apple Clone
             </button>
-            <button className="openModal-button-2 small-screen" onClick={openModal}>
-                <li className='small-info'>i</li>
+            <button className="openModal-button-2 small-screen small-info" onClick={openModal}>
+                <span>
+                    <li style={{ 
+                        color: '#1C1C23', 
+                        textAlign: 'center', 
+                        fontStyle: 'italic',
+                        fontFamily: 'Georgia, Times New Roman, Times, serif',
+                    }}
+                    >i</li>
+                </span>
             </button>
             <Modal
                 isOpen={modalIsOpen}
