@@ -18,16 +18,16 @@ const Calc= () => {
     const frontend = [
         'Built with React', '',
     
-        'API:', 
+        'API:', '',
             '• MathJS library','',
 
-        'Dynamic information:',
+        'Functions:', '',
             '• Calculates values based on keys pressed',
     ];
-    const backend = ['N/A as frontend only'];
+    const backend = ['N/A'];
     const links = [
-        'Netlify',
-        'GitHub - frontend and backend',
+        { url: 'https://calculator-ally.netlify.app/' }, 
+        { url: 'https://github.com/Ally-3/Calculator' }, 
     ];
 
     return (
@@ -51,7 +51,13 @@ const Calc= () => {
                         stack={stack.join('\n')}
                         frontend={frontend.join('\n')}
                         backend={backend.join('\n')}
-                        links={links.join('\n')}
+                        links={links.map((link, index) => (
+                            <div className='allLinks' key={index}>
+                              <a href={link.url} target="_blank" rel="noopener noreferrer">
+                                {link.url}
+                              </a>
+                            </div>
+                        ))}
                     />
                 </div>
             </Modal>

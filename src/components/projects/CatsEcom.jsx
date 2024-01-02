@@ -18,20 +18,20 @@ const CatsEcom= () => {
     const frontend = [
         'Built with React', '',
 
-        `API's:`, 
+        `API's:`, '',
             '• CATS API - cat library',
             '• Faker - faker library','',
         
-        'Dynamic information:',
+        'Functions:', '',
             '• Adding cats to basket',
             '• Removing cat from basket',
             '• Displaying images using the API',
             `• Displays 'in basket' when cat is added to basket`,
     ];
-    const backend = ['N/A as frontend only'];
+    const backend = ['N/A'];
     const links = [
-        'Netlify',
-        'GitHub - frontend and backend',
+        { url: 'https://purrfect-planet.netlify.app/' }, 
+        { url: 'https://github.com/Ally-3/cats-ecommerce' }, 
     ];
 
     return (
@@ -55,7 +55,15 @@ const CatsEcom= () => {
                         stack={stack.join('\n')}
                         frontend={frontend.join('\n')}
                         backend={backend.join('\n')}
-                        links={links.join('\n')}
+
+                        links={links.map((link, index) => (
+                            <div className='allLinks' key={index}>
+                              <a href={link.url} target="_blank" rel="noopener noreferrer">
+                                {link.url}
+                              </a>
+                            </div>
+                          ))}
+
                     />
                 </div>
             </Modal>

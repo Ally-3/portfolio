@@ -11,12 +11,12 @@ const Apple= () => {
 
     const brief = ['CodeNation - Week 1: Website Clone'];
     const description =['A clone of the Apple homepage'];
-    const stack = ['Frontend only: Basic HTML/CSS and JavaScript'];
+    const stack = ['Frontend only: HTML/CSS and JavaScript'];
     const frontend = ['Using new skills of HTML and CSS'];
-    const backend = ['N/A as frontend only'];
+    const backend = ['N/A'];
     const links = [
-        'Netlify',
-        'GitHub - frontend and backend',
+        { url: 'https://apple-clone-ally.netlify.app/' }, 
+        { url: 'https://github.com/Ally-3/Apple-clone' }, 
     ];
 
     return (
@@ -40,7 +40,13 @@ const Apple= () => {
                         stack={stack.join('\n')}
                         frontend={frontend.join('\n')}
                         backend={backend.join('\n')}
-                        links={links.join('\n')}
+                        links={links.map((link, index) => (
+                            <div className='allLinks' key={index}>
+                              <a href={link.url} target="_blank" rel="noopener noreferrer">
+                                {link.url}
+                              </a>
+                            </div>
+                          ))}
                     />
                 </div>
             </Modal>

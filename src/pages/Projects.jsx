@@ -4,7 +4,7 @@ import './pages.css';
 import React from 'react';
 
 import game from '../images/game-l.png';
-import cats from '../images/cats-m.png';
+import cats from '../images/cats-s.png';
 import insta from '../images/insta-s.png';
 import apple from '../images/apple-l.png';
 import calc from '../images/calc-s.png';

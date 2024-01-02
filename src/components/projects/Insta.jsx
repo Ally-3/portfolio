@@ -18,37 +18,37 @@ const Insta= () => {
     const stack = [
         'SERN',
         '',
-        'SQL with Sequelize - database',
-        'Express.js - Node.js web framework',
-        'React.js - a client-side JavaScript framework',
-        'Node.js - the premier JavaScript web server',
+        'SQL with Sequelize',
+        'Express.js',
+        'React.js',
+        'Node.js',
     ];
     const frontend = [
         'Built with React', '',
-
-        'Components:',
+       
+        'Components:','',
             '• Login page',
             '• Sign-up page',
             '• Logout', '',
         
-        'API:', 
+        'API:', '',
             '• Picsum - images library','',
         
-        'Dynamic information:',
+        'Functions information:', '',
             '• Changes to navbar when signed in',
             '• Clicking through reels and post etc',
             '• Displaying images using the API',
     ];
     const backend = [
         'REST API built with Node, Express with a database layer with routes, middleware and controllers handing CRUD operations.','',
-
-        'Controllers:',
+        '',
+        'Controllers:', '',
             '• Login/Sign-up: using password hashing and generating JWT tokens',
     ];
     const links = [
-        'Netlify',
-        'Render',
-        'GitHub - frontend and backend',
+        { url: 'https://insta-clone-m52.netlify.app/' }, 
+        { url: 'https://github.com/Ally-3/instaclone-frontend' }, 
+        { url: 'https://github.com/Ally-3/instaclone-backend' }, 
     ];
 
     return (
@@ -72,7 +72,13 @@ const Insta= () => {
                         stack={stack.join('\n')}
                         frontend={frontend.join('\n')}
                         backend={backend.join('\n')}
-                        links={links.join('\n')}
+                        links={links.map((link, index) => (
+                            <div className='allLinks' key={index}>
+                              <a href={link.url} target="_blank" rel="noopener noreferrer">
+                                {link.url}
+                              </a>
+                            </div>
+                        ))}
                     />
                 </div>
             </Modal>

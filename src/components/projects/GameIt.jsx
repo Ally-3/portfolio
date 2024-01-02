@@ -12,44 +12,51 @@ const GameIt = () => {
     const brief = [
         'CodeNation - Week 11-12: React JS Intermediate','',
         'Final project - group project','',
-        'Making a full stack application with MERN/SERN',
-    ];
+        'Making a full stack application with MERN/SERN', '', 
+        '', 
+        'My role:', '',
+        '• All backend development - CRUD functions',
+        `• Frontend - 'User Settings' - updating username, password` ,
+        `• Frontend - functions for adding from 'Games Library' to 'My Games' page`,
+        `• Frontend - 'My Games' page and components`,
+   ];
     const description =[
-        'Game/it is a gaming library for gamers. It has the latest game news, and the user can save games that they are playing, completed, wanting and owned.'
+        'Game/it is a gaming library for gamers.', '',
+        'It has the latest game news, and the user can save games that they are playing, completed, wanting and owned.'
     ];
     const stack = [
         'SERN',
         '',
-        'SQL with Sequelize - database',
-        'Express.js - Node.js web framework',
-        'React.js - a client-side JavaScript framework',
-        'Node.js - the premier JavaScript web server',
+        'SQL with Sequelize',
+        'Express.js',
+        'React.js',
+        'Node.js',
     ];
     const frontend = [
         'Built with React', '',
 
-        'Components:',
+        'Components:', '',
             '• Login page',
             '• Sign-up page',
             '• Logout',
             '• Updating username, password',
             '• Delete account','',
         
-        'API:', 
+        'API:', '',
             '• RAWG (games library)','',
         
-        'Dynamic information:',
+        'Functions:', '',
             '• Displays username when signed in',
-            '• Adding games to your personal library of games playing, completed, wanting and owned.',
+            '• Adding games to your personal library (My Games) of games playing, completed, wanting and owned.',
             '• Displaying games in personal library of games playing, completed, wanting and owned using the API',
             '• Removing games from your personal library and auto-refresh',
             '• Search bar for games',
             '• Page pagination, filter',
     ];
     const backend = [
-        'REST API built with Node, Express with a database layer with routes, middleware and controllers handing CRUD operations.','',
+        'REST API built with Node.JS, Express.JS with a database layer with routes, middleware and controllers handling CRUD operations.','',
 
-        'Controllers:',
+        'Controllers:', '',
             '• Login/Sign-up: using password hashing and generating JWT tokens',
             '• Update user information using password hashing',
             '• Delete user',
@@ -58,9 +65,9 @@ const GameIt = () => {
             `• Removing games from user's library` ,
     ];
     const links = [
-        'Netlify',
-        'Render',
-        'GitHub - frontend and backend',
+        { url: 'https://game-it-uk.netlify.app/' }, 
+        { url: 'https://github.com/Ally-3/game-it-frontend' }, 
+        { url: 'https://github.com/Ally-3/game-it-backend' }, 
     ];
 
     return (
@@ -87,7 +94,13 @@ const GameIt = () => {
                         stack={stack.join('\n')}
                         frontend={frontend.join('\n')}
                         backend={backend.join('\n')}
-                        links={links.join('\n')}
+                        links={links.map((link, index) => (
+                            <div className='allLinks' key={index}>
+                              <a href={link.url} target="_blank" rel="noopener noreferrer">
+                                {link.url}
+                              </a>
+                            </div>
+                        ))}
                     />
                 </div>
             </Modal>

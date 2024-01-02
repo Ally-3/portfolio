@@ -58,7 +58,7 @@ li:hover {
 /* OPEN MODAL */
 
 .open-modal {
-    height: 150%;
+    /* height: 150%; */
     /* height: 100vh; */
     background-color: #454947;
     white-space: pre-line;
@@ -82,20 +82,24 @@ li:hover {
 }
 
 .modal-child {
-    height: 100vh;
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
 }
 
 .modal-child div {
     padding: 20px;
     display: flex;
     flex-direction: column; 
-    justify-content: space-evenly;
+    justify-content: center;
     text-align: left;
     color: var(--color-cream);
     font-family: 'Sono';
     font-size: 12px;
     letter-spacing: normal;
     background-color: #454947;
+
+    /* height: 100vh; */
 }
 
 @media (max-width: 767px) {
@@ -119,6 +123,12 @@ li:hover {
     text-align: center;
 }
 
+.allLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 /* INSIDE SKILLS MODAL */
 @media (max-width: 600px) {
     .open-modal {
@@ -134,13 +144,13 @@ li:hover {
 }
 
 .modal-h4 {
-    color: var(--color-blue);
+    color: var(--color-cream);
     margin: 10px;
     padding-top: 20px;
 }
 
 .modal-h5 {
-    color: var(--color-cream);
+    color: var(--color-blue);
     font-family: 'Sono';
     letter-spacing: normal;
     margin: 10px;

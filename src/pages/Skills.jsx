@@ -45,7 +45,7 @@ const Skills = () => {
         <div>
             <div className='skills-container'>
                 <div className='skills-box1'>
-                    <h3 className='skills-h3'>SKILLS AND EMPLOYMENT</h3>
+                    <h3 className='skills-h3'>ABOUT ME - SKILLS AND EMPLOYMENT</h3>
                         {skillsData.map((skills, index) => (
                         <div key={index}>
                             <h4 className='skills-date'>{skills.date}</h4>

@@ -14,15 +14,15 @@ const Drum = () => {
         'Making a Drum Kit with onClick/onPress commands',
     ];
     const description =['A Drum Kit App'];
-    const stack = ['Frontend only: Basic HTML/CSS and JavaScript'];
+    const stack = ['Frontend only: HTML/CSS and JavaScript'];
     const frontend = [
-        'Functionality:',
-            '• Keypress function',
+        'Functions:', '',
+            '• Keypress and onClick function',
     ];
-    const backend = ['N/A as frontend only'];
+    const backend = ['N/A'];
     const links = [
-        'Netlify',
-        'GitHub - frontend and backend',
+        { url: 'https://drum-kit-ally.netlify.app/' }, 
+        { url: 'https://github.com/Ally-3/Drumkit' }, 
     ];
 
     return (
@@ -46,7 +46,13 @@ const Drum = () => {
                         stack={stack.join('\n')}
                         frontend={frontend.join('\n')}
                         backend={backend.join('\n')}
-                        links={links.join('\n')}
+                        links={links.map((link, index) => (
+                            <div className='allLinks' key={index}>
+                              <a href={link.url} target="_blank" rel="noopener noreferrer">
+                                {link.url}
+                              </a>
+                            </div>
+                        ))}
                     /> 
                 </div>
             </Modal>

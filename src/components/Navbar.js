@@ -34,7 +34,7 @@ const Navbar = () => {
                             className={`link ${activeLink === 2 ? 'active' : ''}`}
                             onClick={() => handleLinkClick(2)}
                         >
-                            SKILLS
+                            ABOUT ME
                         </Link>
                     </li>
                     </ul>
